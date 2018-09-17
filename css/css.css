@@ -1,0 +1,163 @@
+/* Навігаційне меню */
+
+.menu li
+{
+ float: right;
+    display: block;
+    margin-right: 70px;
+
+
+}
+.menu a {
+
+    color : white;
+    text-decoration: none;
+    font-size: 15px;
+}
+.menu a:hover{
+    text-decoration-line: underline;
+
+}
+
+
+#navigation_menu
+{
+
+    overflow: hidden;
+    background-color: black;
+    width: 100%;
+    height: 88px;
+}
+.Raven
+{
+   margin-left: 100px;
+   font-family: Snell Roundhand, cursive;
+
+}
+.pizza_men
+{
+
+    margin-top:-17px;
+width: 300px;
+height: 75px;
+
+}
+
+.logo{
+    background-image: url(/pictures/citie.png);
+    height: 80px;
+    
+}
+#Time
+{
+    border: 1px solid black;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    position: absolute;
+    background-color: white;
+    color: black;
+   text-align: center;
+  opacity: 0.9;
+z-index: 2;
+
+}
+
+.Tooltip
+{
+    border: 1px solid black;
+}
+
+#Time b
+{
+   text-decoration: underline;
+}
+#Night_Time
+{
+    border: 1px solid black;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    position: absolute;
+    background-color: grey;
+    color: black;
+    opacity: 0.9;
+    text-align: center;
+    width:100%;
+z-index: 1;
+
+}
+
+/* Заголовок (Header ) */
+header{
+
+    background-color: black;
+    margin: 0 auto;
+    left:  0px;
+    top: 0px;
+    margin-top: 0px;
+}
+
+
+
+ 
+
+
+
+
+body{
+    background-image: url(/pictures/pizza.jpg);
+    padding: 0;
+    margin: 0;
+    font-family: Arial;
+  height: 5555px;
+
+}
+
+.product_line
+{
+    position: fixed;
+   overflow: hidden;
+    background-color: white;
+    width: 100%;
+    height: 74px;
+}
+
+.product_menu a
+{
+      color : black;
+    text-decoration: none;
+    font-size: 25px;
+}
+.product_menu li
+{
+
+ float: right;
+    display: block;
+    margin-right: 200px;
+    margin-top: 10px;
+
+
+}
+
+
+.product_list 
+{
+    border: 1px solid black ;
+   
+     margin-top: 180px;
+     margin-right: 70px;
+     margin-left: 70px;
+     margin-bottom: 70px;
+    color: black;
+    text-align: center;
+    font-size: 50px;
+    font-family: cursive;
+    height: 100%;
+background-color: rgb(195,238,228);
+
+}
+
+footer
+{
+
+}
+/*  Footer  */
