@@ -1,3 +1,2 @@
 # RAVENDEAN
 command development
-day first...Strilets suck big dick...
