@@ -1,0 +1,223 @@
+/* Навігаційне меню */
+
+.menu li
+{
+ float: right;
+    display: block;
+    margin-right: 70px;
+
+
+}
+.menu a {
+
+    color : white;
+    text-decoration: none;
+    font-size: 15px;
+}
+.menu a:hover{
+    text-decoration-line: underline;
+
+}
+
+
+#navigation_menu
+{
+
+    overflow: hidden;
+    background-color: black;
+    width: 100%;
+    height: 88px;
+}
+
+.Raven
+{
+   margin-left: 100px;
+   font-family: Snell Roundhand, cursive;
+
+}
+.pizza_men
+{
+
+    margin-top:-18px;
+width: 300px;
+height: 75px;
+
+}
+
+.logo{
+    background-image: url(/pictures/citie.png);
+    height: 80px;
+    
+}
+#Time
+{
+    top: 50px;
+    border: 1px solid black;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    position: absolute;
+    background-color: white;
+    color: black;
+   text-align: center;
+
+  
+z-index: 2;
+
+}
+
+.Tooltip
+{
+    border: 1px solid black;
+}
+
+#Time b
+{
+   text-decoration: underline;
+}
+#Night_Time
+{
+    border: 1px solid black;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    position: absolute;
+    background-color: grey;
+    color: black;
+   
+    text-align: center;
+    width:100%;
+z-index: 1;
+
+}
+
+/* Заголовок (Header ) */
+
+
+
+
+ 
+
+
+
+
+body{
+    background-image: url(/pictures/pizza.jpg);
+    padding: 0;
+    margin: 0;
+    font-family: Arial;
+
+}
+
+.product_line
+{
+ border-bottom-style:solid; 
+ border-bottom-width: 4px;
+    position: relative;
+   overflow: hidden;
+    background-color: white;
+    height: 74px;
+}
+
+.product_line.fixed
+{
+
+       box-shadow: 0 0 1000px  rgba(0,0,0,0.9);
+    position: fixed;
+    width: 100%;
+top: 0;
+}
+
+.product_menu a
+{
+      color : black;
+    text-decoration: none;
+    font-size: 16px;
+}
+.product_menu li
+{
+margin-top: 10px;
+ float: right;
+    display: block;
+    margin-right: 9%;
+
+
+}
+
+
+.product_list 
+{
+
+    border: 1px solid black ;
+   box-shadow: 0 0 40px rgba(0,0,0,0.9);
+   border-radius: 10px;
+     margin-top: 180px;
+     margin-right: 70px;
+     margin-left: 70px;
+     margin-bottom: 70px;
+    color: black;
+    font-size: 50px;
+    font-family: cursive;
+    height: 100%;
+background-color: rgb(195,238,228);
+
+}
+.product_list p
+{
+text-align: center;
+}
+footer
+{
+
+}
+/*  Footer  */
+a.button {
+  font-weight: 100;
+  color: black;
+  text-decoration: none;
+  padding: .8em 1em calc(.8em + 3px);
+  border-radius: 3px;
+  background: orange;
+  box-shadow: 0 -3px rgb(53,167,110) inset;
+  transition: 0.2s;
+} 
+a.button:hover { background: green;
+ }
+a.button:active {
+  background: rgb(33,147,90);
+  box-shadow: 0 3px rgb(33,147,90) inset;
+}
+
+#form_login
+{
+
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 10%;
+    background-color:  rgb(195,238,228);
+    width: auto;
+ display: flex;
+    color: black;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 5px;
+    
+}
+
+.login_left_side
+{
+     display: block;
+
+margin-top: 0;
+width: 50%;
+text-align: center;
+border-right-style: solid;
+}
+.login_right_side
+{
+ 
+height: 100%;
+margin-left: 50%;
+background-color: black;
+color :black;
+
+
+}
