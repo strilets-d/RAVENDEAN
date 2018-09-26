@@ -39,7 +39,7 @@
 {
 
     margin-top:-18px;
-width: 300px;
+width: 200px;
 height: 75px;
 
 }
@@ -47,7 +47,7 @@ height: 75px;
 .logo{
     background-image: url(/pictures/citie.png);
     height: 80px;
-    
+
 }
 #Time
 {
@@ -100,11 +100,12 @@ z-index: 1;
 
 
 body{
-    background-image: url(/pictures/pizza.jpg);
+    background-image: url(/images/bg.jpg);
+    
     padding: 0;
     margin: 0;
     font-family: Arial;
-
+height: 6666px;
 }
 
 .product_line
@@ -158,16 +159,13 @@ margin-top: 10px;
     font-family: cursive;
     height: 100%;
 background-color: rgb(195,238,228);
-
+box-shadow: 0 -8px rgb(53,167,110) inset;
 }
 .product_list p
 {
 text-align: center;
 }
-footer
-{
 
-}
 /*  Footer  */
 a.button {
   font-weight: 100;
@@ -201,22 +199,57 @@ a.button:active {
     border-width: 5px;
     
 }
+.login_left_side input {
+ margin-top: 10px;
+    width: 70%;
+
+}
+.buttons_reg input
+{
+ font-weight: 100;
+  text-decoration: none;
+  padding: .8em 1em calc(.8em + 3px);
+  border-radius: 3px;
+  background: orange;
+  box-shadow: 0 -3px 11px rgb(53,167,110) inset;
+  transition: 0.2s;
+}
+.buttons_reg input:active {
+  background: rgb(33,147,90);
+  box-shadow: 0 3px rgb(33,147,90) inset;
+}
+.buttons_reg input:hover { background: green;
+  transition: 0.6s;
+ }
+input{
+
+  border: none;
+    background: transparent;
+    outline: none;
+    border-bottom: solid 1px rgba(255,255,255, .4);
+  height: 40px;
+  color: black;
+  font-family: "Century Gothic"; 
+  font-size: 30px;
+  text-align: center;
+}
 
 .login_left_side
 {
      display: block;
-
+margin-left: 16px;
 margin-top: 0;
-width: 50%;
-text-align: center;
-border-right-style: solid;
+width: 70%;
+text-align: left;
+margin-bottom: 10px; 
+
 }
 .login_right_side
 {
  
 height: 100%;
-margin-left: 50%;
-background-color: black;
+margin-left: 30%;
+background-image: black;
 color :black;
 
 
