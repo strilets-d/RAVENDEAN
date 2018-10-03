@@ -23,7 +23,7 @@
 </head>
 <body>
 <div class="layer">
-	<h1>Вернутись на <a href="index.php">Головну</a> </h1>
+	<h1><a href="index.php">Вернутись на Головну</a> </h1>
 	<div class="main-agile1">
 		<div class="w3layouts-main">
 					<h2>Sign Up </h2>
@@ -31,7 +31,7 @@
 						
 						
 						<span>(op)</span>
-						<h3 >Вже <a href="login.php" style="color :white; text-decoration: underline; ">зареєстровані </a>?</h3>
+						<h3 >Вже <a href="login.php" ">зареєстровані </a>?</h3>
 						<form action="#" method="post">
 							<div class="email">
 							<input placeholder="E-Mail" name="Email" type="email" required="">

@@ -650,4 +650,11 @@ ul.top-links li a i.fa.fa-facebook:hover ,ul.top-links li a i.fa.fa-twitter:hove
 		top: 490px;
 	}
 }
-/*--responsive--*/
+
+a{
+	
+	font-family: monospace;
+	color: rgb(245,133,123);
+	text-decoration: underline;
+
+}

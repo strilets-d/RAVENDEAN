@@ -31,13 +31,9 @@
         </li>
         <li >
             
-            <a href="index.php" onmouseover="document.getElementById('Time').style.display='block',document.getElementById('Night_Time').style.display='block';" onmouseout="document.getElementById('Time').style.display='none',document.getElementById('Night_Time').style.display='none';" style="cursor: pointer;">Доставка</a>
+            <a href="index.php" >Доставка</a>
 <div >
-             <div id="Time"> <b>Доставка до 30 хвилин,або піцца безкоштовно!</b><br>
-             Якщо курьєр запізнився,він видасть вам карту гарантії на одну безкоштовну піццу.
-             <p>Мінімальна вартість замовлення - 200 грн. </p>
-             <div id="Night_Time" ><b>Середній час доставки 25 хв</b></div>
-         </div>
+             
 </div>
         </li>
     </ul>
