@@ -135,10 +135,7 @@ break;
 echo "<a  href='index5.php?action=add'>
         <img class='ass' src='img/add.png' width='50'>
         </a>";
-
 ?>
 </section>
 </body>
-
-
 </html>
