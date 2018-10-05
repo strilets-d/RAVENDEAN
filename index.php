@@ -43,10 +43,10 @@
 
     <nav class="product_line">
 <ul class="product_menu">
-       
+     
     <img src="/pictures/logo.png" class="pizza_men" >
     
-
+  <input type="button" name="ввв" >
     
         <li>
             <a href="index.php" class=" button ">Напої</a>
@@ -63,6 +63,7 @@
        
     </ul>
     </nav>
+    
 
 
 </header>
