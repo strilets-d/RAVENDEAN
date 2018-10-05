@@ -1,3 +1,54 @@
+<?php
+session_start ();
+?>
+<?php require_once("includes/connection.php"); ?>
+<?php
+
+if(isset($_POST["register"])){
+
+
+if(!empty($_POST['Email']) && !empty($_POST['Password']) && !empty($_POST['PasswordConf'])) {
+  $email=$_POST['Email'];
+  $password=$_POST['Password'];
+  $passwordd=$_POST['PasswordConf'];
+  
+
+    
+  $query=mysql_query("SELECT * FROM usertbl WHERE email='".$email."'");
+  $numrows=mysql_num_rows($query);
+  
+  if($numrows==0)
+  {
+  	if($password==$passwordd){
+  $sql="INSERT INTO usertbl
+      (email,password) 
+      VALUES('$email','$password')";
+
+  $result=mysql_query($sql);
+
+
+  if($result){
+   $message = "Аккаунт успішно створено!";
+  } else {
+   $message = "Не вдалося зареєструвати аккаунт!";
+  }
+
+  }else {
+  	$message="Паролі не співпадають!";
+  }
+  } else {
+   $message = "Це ім'я користувача уже використовується.Спробуйте інше!";
+  }
+
+} else {
+   $message = "Заповніть усі поля!";
+}
+}
+?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,15 +74,15 @@
 </head>
 <body>
 <div class="layer">
-	<h1><a href="index.php">Вернутись на Головну</a> </h1>
+	<h1>Вернутись на <a href="index.php">Головну</a> </h1>
 	<div class="main-agile1">
 		<div class="w3layouts-main">
 					<h2>Sign Up </h2>
-					
-						
+					  
+
 						
 						<span>(op)</span>
-						<h3 >Вже <a href="login.php" ">зареєстровані </a>?</h3>
+						<h3 >Вже <a href="login.php" style="color :white; text-decoration: underline; ">зареєстровані </a>?</h3>
 						<form action="#" method="post">
 							<div class="email">
 							<input placeholder="E-Mail" name="Email" type="email" required="">
@@ -39,13 +90,13 @@
 							</div>
 							<div class="email">
 							<input placeholder="Password" name="Password" type="password" required="">
-							<span class="icons i2"><i class="fa fa-unlock" aria-hidden="true"></i></span>
+							<span class="icons i2"><i class="fa fa-unlock"p aria-hidden="true"></i></span>
 							</div>
 							<div class="email">
 							<input placeholder="Confirm Password" name="PasswordConf" type="password" required="">
 							<span class="icons i2"><i class="fa fa-unlock" aria-hidden="true"></i></span>
 							</div>
-							<input type="submit" value="Реєстрація" name="login">
+							<input type="submit" value="Реєстрація" name="register">
 
 						</form>
 		</div>
@@ -60,6 +111,7 @@
 	<div class="footer-w3l">
 		<p class="agileinfo"> &copy; 2018 Sign Up and Subscribe Form. All Rights Reserved | Design by Ravendean</p>
 	</div>
+	<?php if (!empty($message)) {echo "<p class=\"error\">". $message . "</p>";} ?>
 </div>
 </body>
 </html>
