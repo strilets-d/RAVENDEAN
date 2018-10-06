@@ -21,7 +21,7 @@ window.onload=function(){
 function zmina(){
   if(getCookie('entr')=="on"){
    document.getElementById("log").innerHTML=getCookie('email');         //функція для взміни аккаунта
-   document.getElementById('log').href="#";
+   document.getElementById('log').href="cabinet.php";
    document.getElementById('out').style.display='inline-block';
 }
 else{

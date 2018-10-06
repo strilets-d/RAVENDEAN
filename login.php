@@ -29,6 +29,7 @@ if(!empty($_POST['Email']) && !empty($_POST['Password'])) {
     if($email == $dbemail && $password == $dbpassword)
     {
     $_SESSION['session_email']=$dbemail;
+    $_SESSION['entr']='on';
     header("Location:index.php");
     }
 
