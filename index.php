@@ -9,6 +9,9 @@
     <meta charset="UTF-8">
     <title>Fast with RAVEN</title>
     <link rel="stylesheet" href="css/css.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+        <link rel="shortcut icon" href="images/favico.ico" type="image/x-icon">
+<link rel="stylesheet" href="css/bootstrap-grid.css">
     <script src="cookie.js"></script>
 </head>
 <header>
@@ -87,14 +90,91 @@
     }else {
         $query=mysql_query("SELECT * FROM products WHERE id_type_product=1") or die (mysql_error());
     while($row=mysql_fetch_assoc($query)){
-        echo "<div id='product'>".$row['name_product']."<br><img src='pictures/".$row['photo']."''><i class='fas fa-wallet'></i>Ціна: ".$row['price']."грн.</div>";
+echo "<div class='parallax-bg number'>";
+echo "<div class='dws-wrapper'>
+     <a href='index.php?id=".$row['id_product']."&action=add'><img src='pictures/".$row['photo']."'  class='number_photo'>
+    <div class='dws-text'>
+        Додати до замовлення
+        </div>
+        </a>
+        </div>
+        <p><i class='fas fa-exclamation-circle'></i>".$row['name_product']."<br>
+        <i class='fas fa-wallet'></i>Ціна: ".$row['price']."грн.
+        </p>
+    </div><br><br>";
     }
 
     }
     ?>
     <h5 id="desserts">Десерти</h5>
+    <?php
+    if($_SESSION['entr']==on){ 
+
+    }else {
+        $query=mysql_query("SELECT * FROM products WHERE id_type_product=2") or die (mysql_error());
+    while($row=mysql_fetch_assoc($query)){
+echo "<div class='parallax-bg number'>";
+echo "<div class='dws-wrapper'>
+     <a href='index.php?id=".$row['id_product']."&action=add'><img src='pictures/".$row['photo']."'  class='number_photo'>
+    <div class='dws-text'>
+        Додати до замовлення
+        </div>
+        </a>
+        </div>
+         <p><i class='fas fa-exclamation-circle'></i>".$row['name_product']."<br>
+        <i class='fas fa-wallet'></i>Ціна: ".$row['price']."грн.
+        </p>
+    </div><br><br>";
+    }
+
+    }
+    ?>
     <h5 id="drinks">Напої</h5>
+    <?php
+    if($_SESSION['entr']==on){ 
+
+    }else {
+        $query=mysql_query("SELECT * FROM products WHERE id_type_product=3") or die (mysql_error());
+    while($row=mysql_fetch_assoc($query)){
+echo "<div class='parallax-bg number'>";
+echo "<div class='dws-wrapper'>
+     <a href='index.php?id=".$row['id_product']."&action=add'><img src='pictures/".$row['photo']."'  class='number_photo'>
+    <div class='dws-text'>
+        Додати до замовлення
+        </div>
+        </a>
+        </div>
+         <p><i class='fas fa-exclamation-circle'></i>".$row['name_product']."<br>
+        <i class='fas fa-wallet'></i>Ціна: ".$row['price']."грн.
+        </p>
+    </div><br><br>";
+    }
+
+    }
+    ?>
     <h5 id="sides">Сайди</h5>
+    <?php
+    if($_SESSION['entr']==on){ 
+
+    }else {
+        $query=mysql_query("SELECT * FROM products WHERE id_type_product=4") or die (mysql_error());
+    while($row=mysql_fetch_assoc($query)){
+echo "<div class='parallax-bg number'>";
+echo "<div class='dws-wrapper'>
+     <a href='index.php?id=".$row['id_product']."&action=add'><img src='pictures/".$row['photo']."'  class='number_photo'>
+    <div class='dws-text'>
+        Додати до замовлення
+        </div>
+        </a>
+        </div>
+         <p><i class='fas fa-exclamation-circle'></i>".$row['name_product']."<br>
+        <i class='fas fa-wallet'></i>Ціна: ".$row['price']."грн.
+        </p>
+    </div><br><br>";
+    }
+
+    }
+    ?>
 </div>
     <div id="pizza_menu">
      

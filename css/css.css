@@ -67,7 +67,7 @@ body{
     padding: 0;
     margin: 0;
     font-family: Arial;
-height: 6666px;
+height: auto;
 }
 
 .product_line
@@ -78,11 +78,12 @@ height: 6666px;
    overflow: hidden;
     background-color: white;
     height: 74px;
+
 }
 
 .product_line.fixed
 {
-
+z-index:3;
        box-shadow: 0 0 1000px  rgba(0,0,0,0.9);
     position: fixed;
     width: 100%;
@@ -224,6 +225,80 @@ h3,h5{
 .product img{
 width:1px;
 height:1px;
+}
+.dws-wrapper{
+ position: relative;
+ overflow: hidden;
+ z-index:1;
+}
+.dws-wrapper a{
+ display: block;
+ color: #fff;
+ text-decoration: none;
+}
+.dws-wrapper a img{
+ width: 100%;
+}
+
+.dws-text{
+ position: absolute;
+ top: 0;
+ left: 0;
+ padding: 40px 20px;
+ opacity: 0;
+ z-index: 100;
+ transition: .5s ease;
+}
+.dws-text h3{
+ font-size: 25px;
+}
+.dws-text p{
+ font-size: 14px;
+}
+.dws-wrapper a:before,
+.dws-wrapper a:after{
+ content: '';
+ position: absolute;
+ width: 200%;
+ height: 200%;
+ transition: .5s ease-in-out;
+ mix-blend-mode: darken;
+}
+.dws-wrapper a:before{
+ right: 0;
+ bottom: -100%;
+ background: rgba(230, 12, 50, 0.8);
+ transform: skew(-45deg) translateX(100%);
+}
+.dws-wrapper a:after{
+ left: 0;
+ top: -100%;
+ background: rgba(11, 72, 174, 0.8);
+ transform: skew(135deg) translateX(-100%);
+}
+.dws-wrapper:hover a:before{
+ transform: skew(-45deg) translateX(0%);
+}
+.dws-wrapper:hover a:after{
+ transform: skew(135deg) translateX(0%);
+}
+.dws-wrapper:hover .dws-text{
+ opacity: 1;
+}
+
+.number_photo{
+  height:300px;
+  width:300px;
+   -webkit-transition: all 0.3s ease;;
+  -moz-transition: all 0.3s ease;;
+  -o-transition: all 0.3s ease;;
+  transition: all 0.3s ease;
+}
+
+.number{
+  z-index:2;
+  columns:2;
+
 }
 
 /* media settings*/
