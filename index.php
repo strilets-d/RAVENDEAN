@@ -49,8 +49,7 @@
      
     <img src="/pictures/logo.png" class="pizza_men" >
     
-  <input type="button" name="ввв" >
-    
+      
         <li>
             <a href="#sides" class=" button ">Сайди</a>
         </li>
