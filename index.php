@@ -1,3 +1,7 @@
+<?php
+    session_start();
+    require_once("includes/connection1.php"); 
+    ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,23 +9,19 @@
     <meta charset="UTF-8">
     <title>Fast with RAVEN</title>
     <link rel="stylesheet" href="css/css.css">
+    <script src="cookie.js"></script>
 </head>
-
-
 <header>
-     
- 
-
-   
 <nav id="navigation_menu">
     
     <ul class="menu" >
         <li >
-             <a href="login.php" >Вхід</a> </li>
+             <a href="login.php" id="out" onclick="vuhid()">Вихід</a> </li>
 
         </li>
-        <li>
-            <a href="Register.php">Реєстрація</a>
+        <li >
+             <a href="login.php" id="log" >Вхід</a> </li>
+
         </li>
         <li>
             <a href="index.php">Додаткова інформація</a>
@@ -48,16 +48,16 @@
     
       
         <li>
-            <a href="index.php" class=" button ">Напої</a>
+            <a href="#sides" class=" button ">Сайди</a>
         </li>
         <li>
-            <a href="index.php" class=" button ">Піцца</a>
+            <a href="#drinks" class=" button ">Напої</a>
         </li>
         <li>
-            <a href="index.php" class=" button ">Соуси</a>
+            <a href="#desserts" class=" button ">Десерти</a>
         </li>
         <li>
-          <a href="index.php" class=" button ">Десерти</a>
+          <a href="#pizza" class=" button ">Піцца</a>
         </li>
        
     </ul>
@@ -77,9 +77,26 @@
    
 
 <section class="product_list">
-    <div >
-       <p> Головне меню </p>
+    <div>
+    <p><h3>Головне меню</h3> </p>
+    <h5 id="pizza">Піцца</h5>
+    <?php
+    if($_SESSION['entr']==on){ 
 
+    }else {
+        $query=mysql_query("SELECT * FROM products WHERE id_type_product=1") or die (mysql_error());
+    while($row=mysql_fetch_assoc($query)){
+        echo "<div id='product'>".$row['name_product']."<br><img src='pictures/".$row['photo']."''><i class='fas fa-wallet'></i>Ціна: ".$row['price']."грн.</div>";
+    }
+
+    }
+    ?>
+    <h5 id="desserts">Десерти</h5>
+    <h5 id="drinks">Напої</h5>
+    <h5 id="sides">Сайди</h5>
+</div>
+    <div id="pizza_menu">
+     
     </div>
 </section>
 

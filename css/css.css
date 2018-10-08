@@ -212,8 +212,18 @@ height: 100%;
 margin-left: 30%;
 background-image: black;
 color :black;
+}
 
+.out{
+  display:none;
+}
+h3,h5{
+  text-align: center;
+}
 
+.product img{
+width:1px;
+height:1px;
 }
 .message
 {
