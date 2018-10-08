@@ -301,6 +301,12 @@ height:1px;
 
 }
 
+.message
+{
+  background-color: white;
+  font-family: Arial;
+  border-radius: 2px;
+}
 /* media settings*/
 
 @media screen and (max-width: 900px) {
@@ -322,14 +328,8 @@ margin-left: none;
 .product_menu li
 {
 visibility: hidden;
-
-
 }
-.product_menu
-{
-  
 
-}
 
 
 }
