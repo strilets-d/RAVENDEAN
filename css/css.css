@@ -28,6 +28,7 @@
     width: 100%;
     height: 88px;
 }
+
 .Raven
 {
    margin-left: 100px;
@@ -37,8 +38,8 @@
 .pizza_men
 {
 
-    margin-top:-17px;
-width: 300px;
+    margin-top:-18px;
+width: 200px;
 height: 75px;
 
 }
@@ -46,55 +47,12 @@ height: 75px;
 .logo{
     background-image: url(/pictures/citie.png);
     height: 80px;
-    
-}
-#Time
-{
-    border: 1px solid black;
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
-    position: absolute;
-    background-color: white;
-    color: black;
-   text-align: center;
-  opacity: 0.9;
-z-index: 2;
 
 }
 
-.Tooltip
-{
-    border: 1px solid black;
-}
-
-#Time b
-{
-   text-decoration: underline;
-}
-#Night_Time
-{
-    border: 1px solid black;
-    border-bottom-right-radius: 10px;
-    border-bottom-left-radius: 10px;
-    position: absolute;
-    background-color: grey;
-    color: black;
-    opacity: 0.9;
-    text-align: center;
-    width:100%;
-z-index: 1;
-
-}
 
 /* Заголовок (Header ) */
-header{
 
-    background-color: black;
-    margin: 0 auto;
-    left:  0px;
-    top: 0px;
-    margin-top: 0px;
-}
 
 
 
@@ -104,64 +62,274 @@ header{
 
 
 body{
-    background-image: url(/pictures/pizza.jpg);
+    background-image: url(/images/Main_bg.jpg);
+   
     padding: 0;
     margin: 0;
     font-family: Arial;
-  height: 5555px;
-
+height: auto;
 }
 
 .product_line
 {
-    position: fixed;
+ border-bottom-style:solid; 
+ border-bottom-width: 4px;
+    position: relative;
    overflow: hidden;
     background-color: white;
-    width: 100%;
     height: 74px;
+
+}
+
+.product_line.fixed
+{
+z-index:3;
+       box-shadow: 0 0 1000px  rgba(0,0,0,0.9);
+    position: fixed;
+    width: 100%;
+top: 0;
 }
 
 .product_menu a
 {
       color : black;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 16px;
 }
 .product_menu li
 {
-
+margin-top: 10px;
  float: right;
     display: block;
-    margin-right: 200px;
-    margin-top: 10px;
+    margin-right: 9%;
 
 
 }
 
-
 .product_list 
 {
-    border: 1px solid black ;
+
+    border: 7px ridge grey ;
+   box-shadow: 0 0 40px rgba(0,0,0,0.9);
    
      margin-top: 180px;
      margin-right: 70px;
      margin-left: 70px;
      margin-bottom: 70px;
     color: black;
-    text-align: center;
     font-size: 50px;
     font-family: cursive;
     height: 100%;
-background-color: rgb(195,238,228);
+background-color: rgb(242, 242, 242);
 
 }
+.product_list p
+{
+text-align: center;
+}
 
-footer
+/*  Footer  */
+a.button {
+  font-weight: 100;
+  color: black;
+  text-decoration: none;
+  padding: .8em 1em calc(.8em + 3px);
+  border-radius: 3px;
+  background: orange;
+  box-shadow: 0 -3px rgb(53,167,110) inset;
+  transition: 0.2s;
+} 
+a.button:hover { background: green;
+ }
+a.button:active {
+  background: rgb(33,147,90);
+  box-shadow: 0 3px rgb(33,147,90) inset;
+}
+
+#form_login
 {
 
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 10%;
+    background-color:  rgb(195,238,228);
+    width: auto;
+ display: flex;
+    color: black;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 5px;
+    
 }
-/*  Footer  */
-.actions{
-width:35px;
-height:35px;
+.login_left_side input {
+ margin-top: 10px;
+    width: 70%;
+
+}
+.buttons_reg input
+{
+ font-weight: 100;
+  text-decoration: none;
+  padding: .8em 1em calc(.8em + 3px);
+  border-radius: 3px;
+  background: orange;
+  box-shadow: 0 -3px 11px rgb(53,167,110) inset;
+  transition: 0.2s;
+}
+.buttons_reg input:active {
+  background: rgb(33,147,90);
+  box-shadow: 0 3px rgb(33,147,90) inset;
+}
+.buttons_reg input:hover { background: green;
+  transition: 0.6s;
+ }
+input{
+
+  border: none;
+    background: transparent;
+    outline: none;
+    border-bottom: solid 1px rgba(255,255,255, .4);
+  height: 40px;
+  color: black;
+  font-family: "Century Gothic"; 
+  font-size: 30px;
+  text-align: center;
+}
+
+.login_left_side
+{
+     display: block;
+margin-left: 16px;
+margin-top: 0;
+width: 70%;
+text-align: left;
+margin-bottom: 10px; 
+
+}
+.login_right_side
+{
+ 
+height: 100%;
+margin-left: 30%;
+background-image: black;
+color :black;
+}
+
+.out{
+  display:none;
+}
+h3,h5{
+  text-align: center;
+}
+
+.product img{
+width:1px;
+height:1px;
+}
+.dws-wrapper{
+ position: relative;
+ overflow: hidden;
+ z-index:1;
+}
+.dws-wrapper a{
+ display: block;
+ color: #fff;
+ text-decoration: none;
+}
+.dws-wrapper a img{
+ width: 100%;
+}
+
+.dws-text{
+ position: absolute;
+ top: 0;
+ left: 0;
+ padding: 40px 20px;
+ opacity: 0;
+ z-index: 100;
+ transition: .5s ease;
+}
+.dws-text h3{
+ font-size: 25px;
+}
+.dws-text p{
+ font-size: 14px;
+}
+.dws-wrapper a:before,
+.dws-wrapper a:after{
+ content: '';
+ position: absolute;
+ width: 200%;
+ height: 200%;
+ transition: .5s ease-in-out;
+ mix-blend-mode: darken;
+}
+.dws-wrapper a:before{
+ right: 0;
+ bottom: -100%;
+ background: rgba(230, 12, 50, 0.8);
+ transform: skew(-45deg) translateX(100%);
+}
+.dws-wrapper a:after{
+ left: 0;
+ top: -100%;
+ background: rgba(11, 72, 174, 0.8);
+ transform: skew(135deg) translateX(-100%);
+}
+.dws-wrapper:hover a:before{
+ transform: skew(-45deg) translateX(0%);
+}
+.dws-wrapper:hover a:after{
+ transform: skew(135deg) translateX(0%);
+}
+.dws-wrapper:hover .dws-text{
+ opacity: 1;
+}
+
+.number_photo{
+  height:300px;
+  width:300px;
+   -webkit-transition: all 0.3s ease;;
+  -moz-transition: all 0.3s ease;;
+  -o-transition: all 0.3s ease;;
+  transition: all 0.3s ease;
+}
+
+.number{
+  z-index:2;
+  columns:2;
+
+}
+
+/* media settings*/
+
+@media screen and (max-width: 900px) {
+  .pizza_men {
+        visibility: hidden;
+        width : 0px;
+    }
+.product_menu li
+{
+margin-left: none;
+}
+}
+
+@media screen and (max-width: 600px) {
+  .pizza_men {
+        visibility: hidden;
+        width : 0px;
+    }
+.product_menu li
+{
+visibility: hidden;
+
+
+}
+.product_menu
+{
+  
+
+}
+
+
 }
