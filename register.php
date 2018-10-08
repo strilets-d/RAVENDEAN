@@ -110,8 +110,10 @@ if(!empty($_POST['Email']) && !empty($_POST['Password']) && !empty($_POST['Passw
 	</div>
 	<div class="footer-w3l">
 		<p class="agileinfo"> &copy; 2018 Sign Up and Subscribe Form. All Rights Reserved | Design by Ravendean</p>
-	</div>
-	<?php if (!empty($message)) {echo "<p class=\"error\">". $message . "</p>";} ?>
+	</div class="error">
+	
 </div>
+<div><?php if (!empty($message)) {echo "<script>alert('".$message."');</script>";;} ?></div>
 </body>
+
 </html>

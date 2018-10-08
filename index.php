@@ -46,8 +46,7 @@
      
     <img src="/pictures/logo.png" class="pizza_men" >
     
-  <input type="button" name="ввв" >
-    
+      
         <li>
             <a href="index.php" class=" button ">Напої</a>
         </li>
