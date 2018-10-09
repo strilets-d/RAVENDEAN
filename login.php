@@ -48,8 +48,6 @@ if(!empty($_POST['Email']) && !empty($_POST['Password'])) {
 	<title>Реєстрація</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	ss
-		
 	<link href="css/style.css" rel='stylesheet' type='text/css'/>
 	<link href="css/font-awesome.css" rel="stylesheet">
 	<link href="//fonts.googleapis.com/css?family=Hind:300,400,500,600,700&amp;subset=devanagari,latin-ext" rel="stylesheet">

@@ -138,7 +138,7 @@ echo "<div class='dws-wrapper'>
     while($row=mysql_fetch_assoc($query)){
 echo "<div class='parallax-bg number'>";
 echo "<div class='dws-wrapper'>
-     <a href='index.php?id=".$row['id_type']."&action=add'><img src='pictures/".$row['photo']."'  class='number_photo'>
+     <a href='index.php?id=".$row['id_product']."&action=add'><img src='pictures/".$row['photo']."'  class='number_photo'>
     <div class='dws-text'>
         Додати до замовлення
         </div>
