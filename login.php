@@ -76,7 +76,7 @@ if(!empty($_POST['Email']) && !empty($_POST['Password'])) {
 						<h3 >Не <a href="register.php" style="color :white; text-decoration: underline; ">зареєстровані </a>?</h3>
 						<form action="#" method="post">
 							<div class="email">
-							<input placeholder="E-Mail" name="Email" id="Email" type="email" required="">
+							<input placeholder="E-Mail" name="Email" id="Email" type="email" required="" autocomplete="off">
 							<span class="icons i1"><i class="fa fa-envelope-o" aria-hidden="true"></i></span>
 							</div>
 							<div class="email">
