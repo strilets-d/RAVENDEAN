@@ -226,7 +226,6 @@ h3,h5{
 width:1px;
 height:1px;
 }
-
 .dws-wrapper{
  position: relative;
  overflow: hidden;
@@ -302,14 +301,13 @@ height:1px;
 
 }
 
-=======
 .message
 {
   background-color: white;
   font-family: Arial;
   border-radius: 2px;
 }
->>>>>>> 3ebad28479b3e802bfe9308f58995a8a8f4384cf
+
 /* media settings*/
 
 @media screen and (max-width: 900px) {

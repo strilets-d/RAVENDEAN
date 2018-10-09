@@ -49,7 +49,6 @@
      
     <img src="/pictures/logo.png" class="pizza_men" >
     
-      
         <li>
             <a href="#sides" class=" button ">Сайди</a>
         </li>
