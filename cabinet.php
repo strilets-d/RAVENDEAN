@@ -70,9 +70,7 @@ if($numrows==0){$message="У вас немає наявних орендован
 <head>
 	<meta charset="UTF-8">
     <script src="js/jquery.maskedinput.js"></script>
-	<link rel="stylesheet" href="style1/style3.css">
-    <link rel="stylesheet" href="css/bootstrap-grid.css"> 
-    <link rel="shortcut icon" href="images/favico.ico" type="image/x-icon">
+	<link rel="stylesheet" href="css/style_cabinet.css">
 <script src="js/bootstrap.js"></script> <!-- BS -->
 <script src="js/libraries/jquery-3.2.1.min.js"></script> <!-- jQuery Library -->
 <script src="js/libraries/jquery.waypoints.min.js"></script>  <!-- Waypoints Library  -->
