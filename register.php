@@ -55,7 +55,7 @@ if(!empty($_POST['Email']) && !empty($_POST['Password']) && !empty($_POST['Passw
 	<title>Реєстрація</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 		
 	<link href="css/style.css" rel='stylesheet' type='text/css'/>
 	<link href="css/font-awesome.css" rel="stylesheet">
@@ -85,23 +85,28 @@ if(!empty($_POST['Email']) && !empty($_POST['Password']) && !empty($_POST['Passw
 						<h3 >Вже <a href="login.php" style="color :white; text-decoration: underline; ">зареєстровані </a>?</h3>
 						<form action="#" method="post">
 							<div class="email">
-							<input placeholder="E-Mail" name="Email" type="email" required="">
-							<span class="icons i1"><i class="fa fa-envelope-o" aria-hidden="true"></i></span>
+							<input placeholder="E-Mail" name="Email" type="email"    >
+
+							<span class="icons i1"><i class="fa fa-envelope-o" aria-hidden="true" ></i></span>
 							</div>
 							<div class="email">
-							<input placeholder="Password" name="Password" type="password" required="">
+							<input placeholder="Password" name="Password" type="password"  >
+
 							<span class="icons i2"><i class="fa fa-unlock"p aria-hidden="true"></i></span>
 							</div>
 							<div class="email">
-							<input placeholder="Confirm Password" name="PasswordConf" type="password" required="">
+
+							<input placeholder="Confirm Password" name="PasswordConf" type="password" >
+
 							<span class="icons i2"><i class="fa fa-unlock" aria-hidden="true"></i></span>
 							</div>
-							<input type="submit" value="Реєстрація" name="register">
+							<input type="submit" value="Реєстрація" name="register" >
 
 						</form>
 		</div>
 		<div class="main-agile">
 			<div class="alert-close"> </div>
+
 			<div class="content-wthree">
 				
 			</div>
@@ -113,7 +118,11 @@ if(!empty($_POST['Email']) && !empty($_POST['Password']) && !empty($_POST['Passw
 	</div class="error">
 	
 </div>
-<div><?php if (!empty($message)) {echo "<script>alert('".$message."');</script>";;} ?></div>
+<div><?php if (!empty($message)) {echo "<script>swal('".$message."', '', 'success');</script>";} ?></div>
+<div><?php if (!empty($message)) {echo "<script>swal('".$message."', '', 'error');</script>";} ?></div>
 </body>
 
+
 </html>
+
+
