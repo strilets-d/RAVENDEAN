@@ -6,14 +6,26 @@
         $action = clear_string($_GET["action"]);
         switch ($action){
             case 'add':
-            $query1=mysql_query("SELECT count FROM Orders WHERE id_products=".$id_n) or die(mysql_error());
+            $query2=mysql_query("SELECT id FROM usertbl WHERE email='".$_SESSION['email']."'") or die(mysql_error());
+                while($row=mysql_fetch_assoc($query2)){
+                    $id_k=$row['id'];
+                }
+            $query1=mysql_query("SELECT count FROM Orders WHERE id_products=".$id_n." AND id_client=".$id_k) or die(mysql_error());
+            echo "<script>alert('sssad');</script>";
             $num=mysql_num_rows($query1);
             if($num==0){
-                $id_k=mysql_query("SELECT id FROM usertbl WHERE email='".$_SESSION['email']."'") or die(mysql_error());
-            $query=mysql_query("INSERT INTO `Orders`(`id_products`, `count`, `id_client`) VALUES (".$id_n.",1,".$id_k.")") or die(mysql_error());
+            $query=mysql_query("INSERT INTO `Orders`(`id_products`, `count`, `id_client`) VALUES (".$id_n.",'1',".$id_k.")") or die(mysql_error());
             }else 
             {
-
+            
+                $query4=mysql_query("SELECT * FROM `Orders` WHERE `id_client`=".$id_k." AND `id_products`=".$id_n) or die(mysql_error());
+                while($row=mysql_fetch_assoc($query4)){
+                    $cou=$row['count'];
+                }
+                echo "<script>alert('".$cou."');</script>";
+                $count=$cou+1;
+                echo "<script>alert('".$count."');</script>";
+                $query3=mysql_query("UPDATE `Orders` SET `count`=".$count.",`id_client`=".$id_k." WHERE id_products=".$id_n) or die(mysql_error());
             }
             break;
             case 'alert':
