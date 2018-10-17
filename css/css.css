@@ -117,7 +117,6 @@ margin-top: 25px;
      margin-left: 70px;
      margin-bottom: 70px;
     color: black;
-    font-size: 50px;
     font-family: cursive;
     height: 100%;
 background-color: rgb(242, 242, 242);
@@ -233,7 +232,8 @@ height:1px;
 }
 .dws-wrapper a{
  display: block;
- color: #fff;
+ color: black;
+ opacity:1;
  text-decoration: none;
 }
 .dws-wrapper a img{
@@ -244,7 +244,9 @@ height:1px;
  position: absolute;
  top: 0;
  left: 0;
- padding: 40px 20px;
+ padding: 23% 32%;
+ width: 30%;
+ height:30%;
  opacity: 0;
  z-index: 100;
  transition: .5s ease;
@@ -264,18 +266,7 @@ height:1px;
  transition: .5s ease-in-out;
  mix-blend-mode: darken;
 }
-.dws-wrapper a:before{
- right: 0;
- bottom: -100%;
- background: rgba(230, 12, 50, 0.8);
- transform: skew(-45deg) translateX(100%);
-}
-.dws-wrapper a:after{
- left: 0;
- top: -100%;
- background: rgba(11, 72, 174, 0.8);
- transform: skew(135deg) translateX(-100%);
-}
+
 .dws-wrapper:hover a:before{
  transform: skew(-45deg) translateX(0%);
 }
@@ -297,8 +288,6 @@ height:1px;
 
 .number{
   z-index:2;
-  columns:2;
-
 }
 
 .message
@@ -306,6 +295,10 @@ height:1px;
   background-color: white;
   font-family: Arial;
   border-radius: 2px;
+}
+
+.list{
+column-count:4;
 }
 
 /* media settings*/
