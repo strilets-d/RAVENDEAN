@@ -118,7 +118,8 @@ if(!empty($_POST['Email']) && !empty($_POST['Password']) && !empty($_POST['Passw
 	</div class="error">
 	
 </div>
-<div><?php if (!empty($message)) {echo "<script>swal('Паролі не співпадають!', '', 'error');</script>";} ?></div>
+<div><?php if (!empty($message)) {echo "<script>swal('".$message."', '', 'success');</script>";} ?></div>
+<div><?php if (!empty($message)) {echo "<script>swal('".$message."', '', 'error');</script>";} ?></div>
 </body>
 
 
