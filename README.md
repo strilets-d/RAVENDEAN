@@ -1,2 +1,2 @@
 # RAVENDEAN
-command development
+team development
