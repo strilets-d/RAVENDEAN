@@ -11,34 +11,29 @@ if($numrows!=0){
         $action = clear_string($_GET["action"]);
     switch ($action) {
         case 'cancel':
-    $qur=mysql_query('UPDATE Numbers SET Used=0, id_client=NULL WHERE id_number='.$id_n) or die(mysql_error());
-    $query=mysql_query("SELECT * FROM Numbers WHERE id_client=(SELECT id_client FROM `Clients` where login='".$_SESSION['user']."')");
-$numrows=mysql_num_rows($query);
-if($numrows==0){$message="У вас немає наявних орендованих номерів!"; break;}
-         echo"<h2 class='marg'>Орендовані номери</h2>";
+        $query2=mysql_query("DELETE FROM Orders WHERE id_client=(SELECT id FROM `usertbl` where email='".$_SESSION['email']."') AND id_products=".$id_n) or die(mysql_error());
+        echo"<h2 class='marg'>Піцци додані в замовлення.</h2>";
          echo "<table class='simple-little-table' >";
-    echo "<th>Номер</th>";
-     echo "<th>Тип номеру</th>";
-    echo "<th>Дата початку проживання</th>";
-    echo "<th>Дата кінця проживання</th>";
-    echo "<th>Дія</th>";
+    echo "<th>Назва продукту.</th>";
+    echo "<th>Фото</th>";
+    echo "<th>Кількість</th>";
+    echo "<th>Відміна</th>";
     while($row=mysql_fetch_assoc($query)){
     echo "<tr>";
-    $idx = 1;
-        $qury=mysql_query("SELECT Type_number FROM Type_of_Number WHERE id_type=(SELECT Type_number FROM Numbers WHERE id_number=".$row['id_number'].")") or die(mysql_error());
-        printf("<td>%s</td>", $row['id_number']);
-        while($row1=mysql_fetch_assoc($qury)){
-        printf("<td>%s</td>",$row1['Type_number']);
-    }
-        printf("<td>%s</td>", $row['sdate']);
-        printf("<td>%s</td>", $row['fdate']);
-        $button="<a href='cabinet.php?id=".$row['id_number']."&action=cancel'><img src='img/delete.png' width='30'>";
+    $idx=1;
+    $querys=mysql_query("SELECT * FROM Orders INNER JOIN Products ON Products.id_product=Orders.id_products WHERE Orders.id_products=".$row['id_products']) or die(mysql_error());
+    while($row1=mysql_fetch_assoc($querys)){
+        printf("<td>%s</td>", $row1['name_product']);
+        printf("<td>%s</td>", "<img src='pictures/".$row1['photo']."' id='ph'");
+        printf("<td>%s</td>", $row['count']);
+        $button="<a href='cabinet.php?id=".$row['id_products']."&action=cancel'><img src='images/delete.png' width='30'></a>";
        printf("<td>%s</td>", $button);
-        if($idx%3==0) {
+        break;
+    }
+        if($idx%4==0) {
             echo "</tr><tr>";
         }
         $idx++;
-    echo "</tr>";
     }
     echo "</table>";
             break;
@@ -46,15 +41,22 @@ if($numrows==0){$message="У вас немає наявних орендован
      echo"<h2 class='marg'>Піцци додані в замовлення.</h2>";
          echo "<table class='simple-little-table' >";
     echo "<th>Назва продукту.</th>";
+    echo "<th>Фото</th>";
     echo "<th>Кількість</th>";
+    echo "<th>Відміна</th>";
     while($row=mysql_fetch_assoc($query)){
     echo "<tr>";
     $idx=1;
-        printf("<td>%s</td>", $row['id_product']);
+    $querys=mysql_query("SELECT * FROM Orders INNER JOIN Products ON Products.id_product=Orders.id_products WHERE Orders.id_products=".$row['id_products']) or die(mysql_error());
+    while($row1=mysql_fetch_assoc($querys)){
+        printf("<td>%s</td>", $row1['name_product']);
+        printf("<td>%s</td>", "<img src='pictures/".$row1['photo']."' id='ph'");
+        break;
+    }
         printf("<td>%s</td>", $row['count']);
-        $button="<a href='cabinet.php?id=".$row['id_client']."&action=cancel'><img src='img/delete.png' width='30'>";
+        $button="<a href='cabinet.php?id=".$row['id_products']."&action=cancel'><img src='images/delete.png' width='30'></a>";
        printf("<td>%s</td>", $button);
-        if($idx%3==0) {
+        if($idx%4==0) {
             echo "</tr><tr>";
         }
         $idx++;
@@ -81,7 +83,7 @@ if($numrows==0){$message="У вас немає наявних орендован
  <script src="https://code.jquery.com/jquery-1.12.4.js"></script><link href="css/style.css" rel='stylesheet' type='text/css'/>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-	<title>Вхід у особистий кабінет.</title>
+	<title>Особистий кабінет.</title>
 </head>
 <script type="text/javascript" src="js.js"></script>
 	
@@ -92,7 +94,7 @@ if($numrows==0){$message="У вас немає наявних орендован
 
         </div>
        <a href="login.php" class="right" onclick="vuhid()" id="out">Вийти</a>
-       <a href="login.php" class="right" id="p1">Увійти</a>
+       <a href="index.php" class="right" id="p1">На головну</a>
     
 </div>
     </header>
