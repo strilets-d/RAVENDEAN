@@ -76,7 +76,7 @@ if(!empty($_POST['Email']) && !empty($_POST['Password']) && !empty($_POST['Passw
 <div class="layer">
 	<h1>Вернутись на <a href="index.php">Головну</a> </h1>
 	<div class="main-agile1">
-		<div class="style-main">
+		<div class="w3layouts-main">
 					<h2>Sign Up </h2>
 					  
 
