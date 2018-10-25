@@ -76,7 +76,7 @@ if(!empty($_POST['Email']) && !empty($_POST['Password']) && !empty($_POST['Passw
 <div class="layer">
 	<h1>Вернутись на <a href="index.php">Головну</a> </h1>
 	<div class="main-agile1">
-		<div class="w3layouts-main">
+		<div class="style-main">
 					<h2>Sign Up </h2>
 					  
 
@@ -119,7 +119,7 @@ if(!empty($_POST['Email']) && !empty($_POST['Password']) && !empty($_POST['Passw
 	
 </div>
 <div><?php if (!empty($message)) {echo "<script>swal('".$message."', '', 'success');</script>";} ?></div>
-<div><?php if (!empty($message)) {echo "<script>swal('".$message."', '', 'error');</script>";} ?></div>
+
 </body>
 
 

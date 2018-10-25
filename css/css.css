@@ -8,6 +8,34 @@
 
 
 }
+
+
+#toTop {
+ width:70px;
+ height: 70px;
+ border:1px solid #ccc;
+ border-radius: 40px;
+ background:#f7f7f7;
+ text-align:center;
+ padding:5px;
+ position:fixed;
+ background-image: url(/images/arrow.jpg);
+ background-size: cover;
+ bottom:10px; 
+ right:10px;
+ cursor:pointer;
+ display:none;
+ color:#333;
+ font-family:verdana;
+ font-size:11px;
+ z-index: 999;
+margin-bottom: 60px;
+}
+
+
+.navbar-nav > li{
+  padding-left:10px;
+}
 .menu a {
 
     color : white;
@@ -18,7 +46,6 @@
     text-decoration-line: underline;
 
 }
-
 
 #navigation_menu
 {
@@ -131,14 +158,20 @@ text-align: center;
 a.button {
   font-weight: 100;
   color: black;
+  font-size: 30px;
   text-decoration: none;
-  padding: .8em 1em calc(.8em + 3px);
+  margin-left: 60px;
+  padding-left: 1em;
+  padding-right: 1em;
+
   border-radius: 3px;
   background: orange;
   box-shadow: 0 -3px rgb(53,167,110) inset;
   transition: 0.2s;
+
 } 
 a.button:hover { background: green;
+  color: black;
  }
 a.button:active {
   background: rgb(33,147,90);

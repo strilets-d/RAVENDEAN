@@ -78,23 +78,26 @@ if($numrows==0){$message="У вас немає наявних орендован
 <script src="js/libraries/jquery.visible.js"></script> <!-- Visible Library  -->
 <script src="js/libraries/jquery-ui.min.js"></script> <!-- jQuery UI -->
  <script src='cookie.js'></script>
- <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+ <script src="https://code.jquery.com/jquery-1.12.4.js"></script><link href="css/style.css" rel='stylesheet' type='text/css'/>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 	<title>Вхід у особистий кабінет.</title>
 </head>
 <script type="text/javascript" src="js.js"></script>
-	<header>
+	
+    <header>
+       
     <div class="txt_zavd">
-        <div class="header1">
-        <a href="index.php" class="left"><i class="fas fa-h-square"></i><i class="fas fa-circle-notch"></i><i class="fab fa-tumblr"></i><i class="fab fa-edge"></i></a>
+        <div class="logo">
+
         </div>
-        <a href="#" class="sss"><b>L</b></a>
        <a href="login.php" class="right" onclick="vuhid()" id="out">Вийти</a>
        <a href="login.php" class="right" id="p1">Увійти</a>
-    </div>
+    
+</div>
     </header>
 <body>
+
 
 </body>
 </html>

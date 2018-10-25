@@ -5,22 +5,24 @@ ol,ul{list-style:none;margin:0px;padding:0px;}
 blockquote,q{quotes:none;}
 blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}
 table{border-collapse:collapse;border-spacing:0;}
-/* start editing from here */
+
 a{text-decoration:none;}
-.txt-rt{text-align:right;}/* text align right */
-.txt-lt{text-align:left;}/* text align left */
-.txt-center{text-align:center;}/* text align center */
-.float-rt{float:right;}/* float right */
-.float-lt{float:left;}/* float left */
-.clear{clear:both;}/* clear float */
-.pos-relative{position:relative;}/* Position Relative */
-.pos-absolute{position:absolute;}/* Position Absolute */
-.vertical-base{	vertical-align:baseline;}/* vertical align baseline */
-.vertical-top{	vertical-align:top;}/* vertical align top */
-nav.vertical ul li{	display:block;}/* vertical menu */
-nav.horizontal ul li{	display: inline-block;}/* horizontal menu */
+.txt-rt{text-align:right;}
+.txt-lt{text-align:left;}
+.txt-center{text-align:center;}
+.float-rt{float:right;}
+.float-lt{float:left;}
+.clear{clear:both;}
+.pos-relative{position:relative;}
+.pos-absolute{position:absolute;}
+.vertical-base{	vertical-align:baseline;}
+.vertical-top{	vertical-align:top;}
+nav.vertical ul li{	display:block;}
+nav.horizontal ul li{	display: inline-block;}
 img{max-width:100%;}
-/*end reset*/
+
+
+
 body {
     background-attachment: fixed;
     background-position: center;
@@ -40,14 +42,14 @@ h1 {
     letter-spacing: 1px;
 	color:#fff;
 }
-.w3layouts-main,.main-agile {
+.style-main,.main-agile {
     width: 49%;
     margin: 0 .1em;
     float:left;
     background: #FFFFFF;
     text-align: center;
 }
-.w3layouts-main {
+.style-main {
     background: #e64b50;
     background: #b84592;
     background: rgba(0, 0, 0, 0.58);
@@ -87,7 +89,7 @@ input[type="submit"] {
 input[type="submit"]:hover,.content-wthree input[type="submit"]:hover {
     background: cornflowerblue;
 }
-.w3layouts-main ::-webkit-input-placeholder{
+.style-main ::-webkit-input-placeholder{
     color: #fff!important;
 }
 .main-agile1{
@@ -111,7 +113,7 @@ input[type="submit"]:hover,.content-wthree input[type="submit"]:hover {
     transition: color 0.2s ease-in-out;
     z-index: 999;
 }
-.content-wthree, .w3layouts-main {
+.content-wthree, .style-main {
     padding: 50px 0;
     text-align: center;
 }
@@ -138,7 +140,7 @@ h2 {
     text-align: center;
     text-transform: uppercase;
 }
-.w3layouts-main h2 {
+.style-main h2 {
     color: #fff;
 }
 h3 {
@@ -150,7 +152,7 @@ h3 {
 span {
     color: #fff;
 }
-.w3layouts-main form {
+.style-main form {
     width: 80%;
     margin: 0 auto;
 }
@@ -351,7 +353,7 @@ ul.top-links li a i.fa.fa-facebook:hover ,ul.top-links li a i.fa.fa-twitter:hove
 	h3 {
 		font-size: 21px;
 	}
-	.w3layouts-main {
+	.style-main {
 		padding: 53px 0;
 	}
 }
@@ -384,7 +386,7 @@ ul.top-links li a i.fa.fa-facebook:hover ,ul.top-links li a i.fa.fa-twitter:hove
 	h3 {
 		font-size: 22px;
 	}
-	.w3layouts-main {
+	.style-main {
 		padding: 51px 0;
 	}
 }
@@ -495,7 +497,7 @@ ul.top-links li a i.fa.fa-facebook:hover ,ul.top-links li a i.fa.fa-twitter:hove
 	.main-agile1 {
 		width: 100%;
 	}
-	.w3layouts-main, .main-agile {
+	.style-main, .main-agile {
 		width: 49%;
 	}
 	.content-wthree input[type="email"] {
@@ -540,7 +542,7 @@ ul.top-links li a i.fa.fa-facebook:hover ,ul.top-links li a i.fa.fa-twitter:hove
 	.content-wthree p {
 		padding: 0 13px;
 	}
-	.content-wthree, .w3layouts-main {
+	.content-wthree, .style-main {
 		padding: 45px 0;
 	}
 	.content-wthree h2 {
@@ -557,13 +559,13 @@ ul.top-links li a i.fa.fa-facebook:hover ,ul.top-links li a i.fa.fa-twitter:hove
 	.content-wthree {
 		padding: 25px 0;
 	}
-	.w3layouts-main, .main-agile {
+	.style-main, .main-agile {
 		width: 99%;
 	}
 	.main-agile1 {
 		width: 80%;
 	}
-	.w3layouts-main {
+	.style-main {
 		margin-bottom: 25px;
 	}
 	.alert-close {
@@ -649,7 +651,7 @@ ul.top-links li a i.fa.fa-facebook:hover ,ul.top-links li a i.fa.fa-twitter:hove
 		font-size: 22px;
 		letter-spacing: 0;
 	}
-	.content-wthree, .w3layouts-main {
+	.content-wthree, .style-main {
 		padding: 30px 0;
 	}
 	.alert-close {
@@ -657,7 +659,9 @@ ul.top-links li a i.fa.fa-facebook:hover ,ul.top-links li a i.fa.fa-twitter:hove
 		top: 490px;
 	}
 }
-
+.swal {
+  background-color: rgba(43, 165, 137, 0.45);
+}
 a{
 	
 	font-family: monospace;

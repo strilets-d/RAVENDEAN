@@ -25,7 +25,7 @@ function zmina(){
    document.getElementById('out').style.display='inline-block';
 }
 else{
-document.getElementById("log").innerHTML="Увійти";
+document.getElementById("log").innerHTML="Увійти ";
 document.getElementById('out').style.display='none';
 document.getElementById('log').href="login.php";
  }
