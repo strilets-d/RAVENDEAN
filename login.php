@@ -45,10 +45,10 @@ if(!empty($_POST['Email']) && !empty($_POST['Password'])) {
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Реєстрація</title>
+	<title>Вхід</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	ss
+	
 		
 	<link href="css/style.css" rel='stylesheet' type='text/css'/>
 	<link href="css/font-awesome.css" rel="stylesheet">
@@ -97,6 +97,6 @@ if(!empty($_POST['Email']) && !empty($_POST['Password'])) {
 	<div class="footer-w3l">
 		<p class="agileinfo"> &copy; 2018 Sign Up and Subscribe Form. All Rights Reserved | Design by Ravendean</p>
 	</div>
-</div>
+</div><div><?php if (!empty($message)) {echo "<script>swal('".$message."', '', 'info');</script>";} ?></div>
 </body>
 </html>
