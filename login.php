@@ -70,7 +70,7 @@ if(!empty($_POST['Email']) && !empty($_POST['Password'])) {
 <div class="layer">
 	<h1>Вернутись на <a href="index.php">Головну</a> </h1>
 	<div class="main-agile1">
-		<div class="w3layouts-main">
+		<div class="style-main">
 					<h2>Log in </h2>
 						<span>(op)</span>
 						<h3 >Не <a href="register.php" style="color :white; text-decoration: underline; ">зареєстровані </a>?</h3>
