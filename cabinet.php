@@ -3,6 +3,9 @@
 <?php http://127.0.0.1/openserver/phpmyadmin/sql.php?server=1&db=Hotel&table=num&pos=0&token=f2afcaeaaeda486b9ba0ee921c1eecc0#
 header('Content-Type: text/html; charset=utf-8');
 require_once("includes/connection1.php");
+if(isset($_POST['send'])){
+    $query3=mysql_query("DELETE FROM Orders WHERE id_client=(SELECT id FROM `usertbl` where email='".$_SESSION['email']."')");
+}
 $query=mysql_query("SELECT * FROM Orders WHERE id_client=(SELECT id FROM `usertbl` where email='".$_SESSION['email']."')");
 $numrows=mysql_num_rows($query);
 include("functions.php");
@@ -13,7 +16,10 @@ if($numrows!=0){
         case 'cancel':
         $query2=mysql_query("DELETE FROM Orders WHERE id_client=(SELECT id FROM `usertbl` where email='".$_SESSION['email']."') AND id_products=".$id_n) or die(mysql_error());
         echo"<h2 class='marg'>Піцци додані в замовлення.</h2>";
-         echo "<table class='simple-little-table' >";
+     echo "
+     <div class='colmn'>";
+         echo "
+         <div class='block'><table class='simple-little-table' >";
     echo "<th>Назва продукту.</th>";
     echo "<th>Фото</th>";
     echo "<th>Кількість</th>";
@@ -35,11 +41,22 @@ if($numrows!=0){
         }
         $idx++;
     }
+    echo "</table></div>";
+    echo '<div class="block"> 
+    <form class="frm" method="post">
+    <input type="text" placeholder="Адреса" id="address" autocomplete="off">
+    <input type="submit" name="send" value="Доставити(30хв)"">
+    </form>
+    </div>';
+            break;
     echo "</table>";
             break;
         default:
      echo"<h2 class='marg'>Піцци додані в замовлення.</h2>";
-         echo "<table class='simple-little-table' >";
+     echo "
+     <div class='colmn'>";
+         echo "
+         <div class='block'><table class='simple-little-table' >";
     echo "<th>Назва продукту.</th>";
     echo "<th>Фото</th>";
     echo "<th>Кількість</th>";
@@ -61,7 +78,13 @@ if($numrows!=0){
         }
         $idx++;
     }
-    echo "</table>";
+    echo "</table></div>";
+    echo '<div class="block"> 
+    <form class="frm" method="post">
+    <input type="text" placeholder="Адреса" id="address" autocomplete="off">
+    <input type="submit" name="send" value="Доставити(30хв)"">
+    </form>
+    </div>';
             break;
     }
 }

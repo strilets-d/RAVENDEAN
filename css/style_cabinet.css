@@ -59,7 +59,7 @@ header{
 }
 
 p>input:focus{
-border-bottom: solid 1px rgba(255,255,255, .8);
+border-bottom: solid 1px rgba(255,255,255, 1);
 }
 
 p>input::placeholder{
@@ -174,7 +174,6 @@ color:white;
 	border-top: 1px solid #ffffff;
 	border-bottom:1px solid #e0e0e0;
 	border-left: 1px solid #e0e0e0;
- 
 	background: #fafafa;
 	background: -webkit-gradient(linear, left top, left bottom, from(#fbfbfb), to(#fafafa));
 	background: -moz-linear-gradient(top,  #fbfbfb,  #fafafa);
@@ -227,3 +226,15 @@ h2{
 	width:70px;
 	height:70px;
 }
+.colmn{
+	column-count: 2;
+}
+@supports (-webkit-appearance:none) {
+  .block {
+    width: 100%;
+    float: left;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+}
+
