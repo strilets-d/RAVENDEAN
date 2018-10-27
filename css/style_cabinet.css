@@ -122,11 +122,12 @@ color:white;
 	color:#666;
 	font-size:12px;
 	text-shadow: 1px 1px 0px #fff;
-	background:#eaebec;
+	
 	margin:20px;
 	border:#ccc 1px solid;
 	border-collapse:separate;
- 
+ width : 700px;
+ height: 500px;
 	-moz-border-radius:3px;
 	-webkit-border-radius:3px;
 	border-radius:3px;
@@ -135,7 +136,8 @@ color:white;
 	-webkit-box-shadow: 0 1px 2px #d1d1d1;
 	box-shadow: 0 1px 2px #d1d1d1;
 }
- 
+
+
 .simple-little-table th {
 	font-weight:bold;
 	padding:21px 25px 22px 25px;
@@ -151,18 +153,19 @@ color:white;
 	padding-left:20px;
 }
 .simple-little-table tr:first-child th:first-child{
-	-moz-border-radius-topleft:3px;
+	-moz-border-radius-top-left:3px;
 	-webkit-border-top-left-radius:3px;
 	border-top-left-radius:3px;
 }
 .simple-little-table tr:first-child th:last-child{
-	-moz-border-radius-topright:3px;
+	-moz-border-radius-top-right:3px;
 	-webkit-border-top-right-radius:3px;
 	border-top-right-radius:3px;
 }
 .simple-little-table tr{
 	text-align: center;
 	padding-left:20px;
+
 }
 .simple-little-table tr td:first-child{
 	text-align: left;
@@ -174,32 +177,33 @@ color:white;
 	border-top: 1px solid #ffffff;
 	border-bottom:1px solid #e0e0e0;
 	border-left: 1px solid #e0e0e0;
-	background: #fafafa;
+	
 	background: -webkit-gradient(linear, left top, left bottom, from(#fbfbfb), to(#fafafa));
 	background: -moz-linear-gradient(top,  #fbfbfb,  #fafafa);
+	background: white;vertical-align: top;
 }
 .simple-little-table tr:nth-child(even) td{
-	background: #f6f6f6;
+
 	background: -webkit-gradient(linear, left top, left bottom, from(#f8f8f8), to(#f6f6f6));
-	background: -moz-linear-gradient(top,  #f8f8f8,  #f6f6f6);
+	background: -moz-linear-gradient(top,  #f8f8f8,  #f6f6f6);background: white;vertical-align: top;
 }
 .simple-little-table tr:last-child td{
-	border-bottom:0;
+	border-bottom:0;background: white;vertical-align: top;
 }
 .simple-little-table tr:last-child td:first-child{
-	-moz-border-radius-bottomleft:3px;
+	-moz-border-radius-bottom-left:3px;
 	-webkit-border-bottom-left-radius:3px;
 	border-bottom-left-radius:3px;
 }
 .simple-little-table tr:last-child td:last-child{
-	-moz-border-radius-bottomright:3px;
+	-moz-border-radius-bottom-right:3px;
 	-webkit-border-bottom-right-radius:3px;
 	border-bottom-right-radius:3px;
 }
 .simple-little-table tr:hover td{
-	background: #f2f2f2;
+	
 	background: -webkit-gradient(linear, left top, left bottom, from(#f2f2f2), to(#f0f0f0));
-	background: -moz-linear-gradient(top,  #f2f2f2,  #f0f0f0);
+	background: -moz-linear-gradient(top,  #f2f2f2,  #f0f0f0);background: white;
 }
  
 .simple-little-table a:link {
@@ -223,12 +227,12 @@ h2{
 }
 
 #ph{
-	width:70px;
-	height:70px;
+
+	width:100%;
+	height:200px;
+
 }
-.colmn{
-	column-count: 2;
-}
+
 @supports (-webkit-appearance:none) {
   .block {
     width: 100%;
