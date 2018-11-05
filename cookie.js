@@ -34,4 +34,8 @@ document.getElementById('log').href="login.php";
  document.cookie='entr=off';
  }
 
+ function sss(){
+  
+ }
+
 

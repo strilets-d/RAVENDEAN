@@ -116,17 +116,17 @@ if($numrows!=0){
         <div class="logo">
 
         </div>
-       <a href="login.php" class="right" onclick="vuhid()" id="out">Вийти</a>
+       <a href="login.php" class="right" onclick="vuhid()" id="out">Вийтиs</a>
        <a href="login.php" class="right" id="p1">Увійти</a>
        <a href="login.php" class="right" id="p1">Увійти</a>
        <a href="login.php" class="right" id="p1">Увійти</a>
        <a href="index.php" class="right" id="p1">На головну</a>
-    
 </div>
     </header>
 <body>
 
-
+<table>
+</table>
 </body>
 </html>
 <?php if (!empty($message)) {echo "<p class=\"error\">" . $message . "</p>";} ?>
