@@ -35,7 +35,7 @@ document.getElementById('log').href="login.php";
  }
 
  function sss(){
-  
+ alert('sss');
  }
 
 
