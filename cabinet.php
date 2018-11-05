@@ -91,11 +91,10 @@ if($numrows==0){$message="У вас немає наявних орендован
         <div class="logo">
 
         </div>
-       <a href="login.php" class="right" onclick="vuhid()" id="out">Вийти</a>
+       <a href="login.php" class="right" onclick="vuhid()" id="out">Вийтиs</a>
        <a href="login.php" class="right" id="p1">Увійти</a>
        <a href="login.php" class="right" id="p1">Увійти</a>
        <a href="login.php" class="right" id="p1">Увійти</a>
-    
 </div>
     </header>
 <body>
