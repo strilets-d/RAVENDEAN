@@ -10,4 +10,5 @@ function setCookie() {
 
 function getCookie(){
 	var expire = new Date();
+	var inp=document.getElementById('Email');
 }
