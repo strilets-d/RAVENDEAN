@@ -7,3 +7,7 @@ function setCookie() {
     document.cookie = 'email' + "=" + inp.value+';expires=' + expire.toUTCString() + ";";
  document.cookie='entr=on';
     }
+
+function getCookie(){
+	var expire = new Date();
+}
